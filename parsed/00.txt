@@ -1,0 +1,45 @@
+0x0a read req 0x180a 0x2a26 None -- None
+0x0b read res 0x180a 0x2a26 None -- btatt.firmware_revision_string: D.00.7FB-12
+0x0a read req 0x180a 0x2a28 None -- None
+0x0b read res 0x180a 0x2a28 None -- btatt.software_revision_string: 0000000000000105
+0x0a read req 0x1800 0x2a00 None -- None
+0x0b read res 0x1800 0x2a00 None -- btatt.device_name: RS7 Intelli IT
+0x12 req notif ecbe- o00 0x2902 -- None
+0x12 req notif ecbe- setup 0x2902 -- None
+0x52 write ecbe- setup None -- 02:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+0x1b notif ecbe- setup None -- 82:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+0x52 write ecbe- setup None -- 00:9d:76:d1:f8:de:86:19:bf:86:85:44:17:c3:48:b9:74
+0x1b notif ecbe- setup None -- 80:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+0x12 req notif ecbe- setup 0x2902 -- None
+0x12 req notif ecbe- o01 0x2902 -- None
+0x12 req notif ecbe- o02 0x2902 -- None
+0x12 req notif ecbe- o03 0x2902 -- None
+0x52 write ecbe- i00 None -- 08:00:00:00:00:10:00:18
+0x1b notif ecbe- o00 None -- 18:80:00:00:00:10:00:00:00:94:02:44:ff:ff:ff:ff
+0x1b notif ecbe- o01 None -- ff:ff:ff:ff:ff:ff:00:5a:00:00:00:00:00:00:00:00
+0x0a read req 0x180a 0x2a23 None -- None
+0x0b read res 0x180a 0x2a23 None -- btatt.system_id.manufacturer_identifier: 0x000000fffef69c32
+0x52 write ecbe- i00 None -- 08:01:00:02:60:2c:00:47
+0x1b notif ecbe- o00 None -- 34:81:00:02:60:2c:00:0e:00:02:00:01:00:02:00:0e
+0x1b notif ecbe- o01 None -- 00:00:00:02:00:00:0a:4d:00:0d:00:0b:00:00:00:00
+0x1b notif ecbe- o02 None -- 00:00:90:6f:ff:ff:00:00:00:00:00:00:00:00:00:00
+0x1b notif ecbe- o03 None -- 01:fe:00:b9:00:00:00:00:00:00:00:00:00:00:00:00
+0x52 write ecbe- i00 None -- 08:01:00:02:8c:10:00:97
+0x1b notif ecbe- o00 None -- 18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18
+0x1b notif ecbe- o01 None -- 0f:0e:04:05:5d:a2:00:82:00:00:00:00:00:00:00:00
+0x52 write ecbe- i00 None -- 08:01:00:08:60:1c:00:7d
+0x1b notif ecbe- o00 None -- 24:81:00:08:60:1c:59:5d:98:45:04:d0:13:63:00:00
+0x1b notif ecbe- o01 None -- 00:01:21:de:43:4d:98:4f:04:d0:1a:a9:00:00:00:02
+0x1b notif ecbe- o02 None -- ef:10:00:11:00:00:00:00:00:00:00:00:00:00:00:00
+0x12 Write ecbe- i00 None -- 18:01:c0:02:a4:10:00:0e:00:02:00:01:00:02:00:0e
+0x52 write ecbe- i01 None -- 00:00:00:02:00:00:00:6c
+0x1b notif ecbe- o00 None -- 18:81:c0:02:a4:10:00:0e:00:02:00:01:00:02:00:0e
+0x1b notif ecbe- o01 None -- 00:00:00:02:00:00:00:ec:00:00:00:00:00:00:00:00
+0x12 Write ecbe- i00 None -- 26:01:c0:02:c2:1e:01:00:00:01:00:01:00:00:00:00
+0x12 Write ecbe- i01 None -- 00:00:01:03:a0:c0:00:03:00:00:00:00:01:18:0f:0e
+0x52 write ecbe- i02 None -- 1d:05:5d:bb:00:bf
+0x1b notif ecbe- o00 None -- 26:81:c0:02:c2:1e:01:00:00:01:00:01:00:00:00:00
+0x1b notif ecbe- o01 None -- 00:00:01:03:a0:c0:00:03:00:00:00:00:01:18:0f:0e
+0x1b notif ecbe- o02 None -- 1d:05:5d:bb:00:3f:00:00:00:00:00:00:00:00:00:00
+0x52 write ecbe- i00 None -- 08:0f:00:00:00:00:00:07
+0x1b notif ecbe- o00 None -- 08:8f:00:00:00:00:00:87:00:00:00:00:00:00:00:00
