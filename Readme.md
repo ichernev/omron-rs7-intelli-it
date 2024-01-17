@@ -91,18 +91,140 @@ Only some stuff at the back is changing (before checksum)
 the first byte increases with 9, last 2 bytes (u16) decrease with 2295, which
 is -9 mod 256
 
-## blood pressure
+## M0 08:01:00:02:60:2c:00:47
 
-The message is in response to 08:01:00:08:XX:0e:00:XX request.
+The answer is kinda long:
 
+    [5d: empty]
+    34:81:00:02:60:2c:80:0f:80:05:00:02:80:00:00:0f:
+                              last
+
+    80:00:00:05:80:00:0a:4d:00:0d:00:0b:00:00:00:00:
+
+
+    00:00:90:6f:01:00:00:01:00:11:00:00:00:00:00:00:
+                               ??
+
+    ec:13:00:29
+
+    [7: 4 measurements]
+                               __       _____
+    34:81:00:02:60:2c:80:0f:80:09:00:02:00:04:00:0f:
+                              last        pend
+             __
+    80:00:00:09:80:00:0a:4d:00:0d:00:0b:00:00:00:00:
+            last
+                               __
+    00:00:90:6f:01:00:00:01:00:13:00:00:00:00:00:00:
+                               ??
+    _____
+    ea:15:00:af
+     cs
+
+    checksum inside package sums up to 255 (0xEA+0x15), but not sure how is it
+    computed.
+
+## M1 08:01:00:02:8c:10:00:97
+
+    [5d: empty]
+
+    18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
+                                              ?????
+                _____
+    00:10:17:30:2c:d3:00:b5
+    ???????????  cs
+
+    [7: 4 meas]
+
+    18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
+                                              ?????
+                _____
+    11:11:35:08:24:db:00:bf
+    ???????????  cs
+
+    inner checksum, not sure how is it computed.
+
+## Device memory read (blood pressure measurement)
+
+The message is in response to 08:01:00:08:XX:YY:00:CS request.
+Where XX is the start memory offset, and YY is the length (0e ~ 14 for one
+measurement, or a multiple for more).
+
+    Response
+                start                                   pos
+                |   .-len                               | cs-cs
     16:81:00:08:8a:0e:41:59:58:4d:05:ed:1e:94:00:00:00:04:18:e7:00:8f
+                      -----------------------------------------    -> 14 bytes
 
-     0  1  2  3  4  5  6  7  8  9  -- position
-                      65 89 88 77  -- decimal
-
-    high = b[7] + b[8] - 63
-    low = b[6]
+     0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19    -> position
+                     dia   flags  -----------         cs1          -> decimal
+                        sys   pulse    ts                cs2
+    sys = b[7] + 25
+    dia = b[6]
     pulse = b[9]
+
+    b[8]: flags
+
+    01011000 -- standard measurement
+    11011000 -- device too low
+    10011000 -- device too high
+
+    b[10:14] look like timestamp, for multiple measurements in same transaction
+             it seems reasonble, but across transactions it's too off
+
+    # two byte checksum
+    b[18] = 255 - b[19]
+    b[19] = sum(b[6:18]) % 256
+
 
 Also the second write-respond request 26:01:c0:02:c2:1e:01 is longer when there
 is a measurement reported.
+
+## M2 18:01:c0:02:a4:10
+
+This message is echoed back from the device, I assume it's a write.
+(It is actually M3 when data is read, but let's keep it M2 for now).
+
+    [5d: empty]
+                     |-
+    18:01:c0:02:a4:10:80:0f:80:05:00:02:80:00:00:0f:
+                              last
+                    -|
+    80:00:00:05:80:00:00:ed
+            last
+
+    [7: 4 meas]
+                     |-        __
+    18:01:c0:02:a4:10:80:0f:80:09:00:02:80:00:00:0f:
+                              last
+             __     -|
+    80:00:00:09:80:00:00:ed
+            last
+
+
+## M3 18:01:c0:02:c2:XX
+
+I guess c0:02 is write comman and the next two bytes are pos+len
+
+    [5d: empty]
+                     |->
+    16:01:c0:02:c2:0e:01:00:00:01:00:13:00:00:00:00:
+                                     ??
+             <-|
+    00:00:ec:15:00:f3
+           cs1
+
+    [7: 4 meas]
+                     |-
+    26:81:c0:02:c2:1e:01:00:00:01:00:15:00:00:00:00:
+                                     ??
+
+             --|--
+    00:00:ea:17:a0:c0:00:03:00:00:00:00:01:18:11:11:
+           cs1
+              -|
+    38:08:24:de:00:e1
+           cs2
+
+cs1 is a 2b-checksum that sums to 257
+cs2 is a 2b-checksum that sums to 258
