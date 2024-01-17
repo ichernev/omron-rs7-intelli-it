@@ -40,6 +40,11 @@ transfer.
 - 03 "114|64|77 13:58 jan 15"
 - 04 "113|83|66 00:32 jan 16"
 - 05 4 empty (split into a b c d)
+- 06 4 measuremnts (one correspondence)
+  - 118 76 76 17:03 jan 17
+  - 120 77 73 17:04 jan 17 (low error)
+  - 89 50 74  17:06 jan 17 (high error)
+  - 111 73 79 17:07 jan 17
 
 # Findings
 
@@ -66,10 +71,10 @@ From now on I'm focusing on understanding the input/output messages themselves.
 Kind of transaction, current state (iter) is first read in M1, then
 in M3 it is confirmed that the state is read, the device echos it back.
 
-[M1-o] 0b f2 0d --> [M3-io] 0d f2 0f
-[M1-o] 0d f0 0f --> [M3-io] 0f f0 11
-[M1-o] 0f ee 11 --> [M3-io] 11 ee 13
-[M1-o] 11 ec 13 --> [M3-io] 13 ec 15
+    [M1-o] 0b f2 0d --> [M3-io] 0d f2 0f
+    [M1-o] 0d f0 0f --> [M3-io] 0f f0 11
+    [M1-o] 0f ee 11 --> [M3-io] 11 ee 13
+    [M1-o] 11 ec 13 --> [M3-io] 13 ec 15
 
 The second part of (f20d) that is going in both directions, is probably
 an inner checksum.
@@ -78,10 +83,26 @@ an inner checksum.
 
 Only some stuff at the back is changing (before checksum)
 
-37:2f:0d:f2 -?
-05:30:3e:c1
-0e:30:35:ca
-17:30:2c:d3
+    37:2f:0d:f2 -?
+    05:30:3e:c1
+    0e:30:35:ca
+    17:30:2c:d3
 
 the first byte increases with 9, last 2 bytes (u16) decrease with 2295, which
 is -9 mod 256
+
+## blood pressure
+
+The message is in response to 08:01:00:08:XX:0e:00:XX request.
+
+    16:81:00:08:8a:0e:41:59:58:4d:05:ed:1e:94:00:00:00:04:18:e7:00:8f
+
+     0  1  2  3  4  5  6  7  8  9  -- position
+                      65 89 88 77  -- decimal
+
+    high = b[7] + b[8] - 63
+    low = b[6]
+    pulse = b[9]
+
+Also the second write-respond request 26:01:c0:02:c2:1e:01 is longer when there
+is a measurement reported.

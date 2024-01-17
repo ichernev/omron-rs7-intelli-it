@@ -2,11 +2,13 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from tools import verify_cs, exp_len, join, ints, safe_truncate
 
 def parse_args(args):
     parser = argparse.ArgumentParser("Convert json bt packet dump to human readable")
     parser.add_argument("file", nargs=1, help="json packet dump file")
     parser.add_argument("--hex", action='store_true', help="output for hex editor")
+    parser.add_argument("--json", action='store_true', help="output json msgs")
     return parser.parse_args(args)
 
 def get(obj, path, default=None):
@@ -44,7 +46,7 @@ def human_char(char):
         'b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b': 'setup',
     }.get(char, char)
 
-def stage_01(packets):
+def stage_raw(packets):
     for packet in packets:
         btatt = get(packet, '_source/layers/btatt')
         op = get(btatt, 'btatt.opcode')
@@ -86,7 +88,7 @@ def stage_01(packets):
 
         yield f"{op} {cmd} {human_svc(svc)} {human_char(char)} {ccc} -- {value}"
 
-def stage_02(lines):
+def stage_hex(lines):
     before = True
     for line in lines:
         if 'btatt.system_id.manufacturer_identifier' in line:
@@ -110,17 +112,61 @@ def stage_02(lines):
         raw_data = bytes(int(d, 16) for d in data.split(':'))
         yield pad(raw_data)
 
-def main(opts):
-    packets = json.loads(Path(opts.file[0]).read_bytes())
+def stage_json(lines):
+    lines = iter(lines)
+    before = True
+    for line in lines:
+        if 'btatt.system_id.manufacturer_identifier' in line:
+            break
 
-    res = stage_01(packets)
+
+    msgs = []
+    def accum_val(val):
+        if not msgs or exp_len(msgs[-1]) <= len(msgs[-1]):
+            msgs.append(val)
+        else:
+            msgs[-1] = join(msgs[-1], val)
+
+    for line in lines:
+        if not line:
+            continue
+        op, cmd, svc, char, ccc, _, val = line.split()
+        if val != '01:00:ff:ff':
+            accum_val(val)
+
+    msgs = [safe_truncate(msg) for msg in msgs]
+    if not all(verify_cs(ints(msg)) for msg in msgs):
+        raise ValueError("checksum invalid")
+
+    return msgs
+
+def main(opts):
+    was_raw = None
+    if opts.file[0].endswith('.json'):
+        was_raw = True
+        # packet capture?
+        packets = json.loads(Path(opts.file[0]).read_bytes())
+        parsed = stage_raw(packets)
+    elif opts.file[0].endswith('.txt'):
+        # raw parsed
+        parsed = Path(opts.file[0]).read_text().split('\n')
+        was_raw = False
+    else:
+        raise Exception("not sure what to do with input file")
+
     if opts.hex:
-        res = stage_02(res)
+        res = stage_hex(parsed)
         fres = b''.join(res)
         sys.stdout.buffer.write(fres)
-    else:
-        fres = '\n'.join(res)
+    elif opts.json or not was_raw:
+        # assume we want json if the input is parsed
+        res = stage_json(parsed)
+        print(json.dumps(res, indent=2))
+    elif was_raw:
+        fres = '\n'.join(parsed)
         print(fres)
+    else:
+        raise Exception("don't know what to do")
 
 
 if __name__ == '__main__':
