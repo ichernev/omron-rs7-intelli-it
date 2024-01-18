@@ -130,19 +130,20 @@ The answer is kinda long:
 
     18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
                                               ?????
-                _____
+
     00:10:17:30:2c:d3:00:b5
-    ???????????  cs
+    ?????????????????
 
     [7: 4 meas]
 
     18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
                                               ?????
-                _____
-    11:11:35:08:24:db:00:bf
-    ???????????  cs
 
-    inner checksum, not sure how is it computed.
+    11:11:35:08:24:db:00:bf
+    ?????????????????
+
+Not sure what this is, but it is "written back" in M3 with minor corrections.
+
 
 ## Device memory read (blood pressure measurement)
 
@@ -206,25 +207,53 @@ This message is echoed back from the device, I assume it's a write.
 
 I guess c0:02 is write comman and the next two bytes are pos+len
 
+    [4: 1 meas]
+
+    26:81:c0:02:c2:1e:01:00:00:01:00:0b:00:00:00:00:
+                   len               ??
+             --|--
+    00:00:f4:0d:a0:c0:00:03:00:00:00:00:01:18:00:10:
+           cs1
+             --|
+    14:22:3e:c2:00:eb
+
     [5d: empty]
                      |->
     16:01:c0:02:c2:0e:01:00:00:01:00:13:00:00:00:00:
-                                     ??
+                   len               ??
              <-|
     00:00:ec:15:00:f3
            cs1
 
     [7: 4 meas]
-                     |-
+                     |->
     26:81:c0:02:c2:1e:01:00:00:01:00:15:00:00:00:00:
-                                     ??
+                   len               ??
 
              --|--
     00:00:ea:17:a0:c0:00:03:00:00:00:00:01:18:11:11:
            cs1
-              -|
+             <-|
     38:08:24:de:00:e1
-           cs2
 
-cs1 is a 2b-checksum that sums to 257
-cs2 is a 2b-checksum that sums to 258
+
+cs1 sums up to 257
+cs1[1] is iter + 2?
+
+This is in the second part of the message, only present when data was read.
+
+               M1                  M3 (second part)
+                VV       ZZ                VV       ZZ
+    01:18:11:0e:19:38:13:ec -> 01:18:11:0e:1b:38:13:ee     ->    1 VVd:2 ZZ:2
+    01:18:11:0e:14:39:17:e8 -> 01:18:11:0e:15:39:17:e9     ->    2 VVd:1 ZZ:1
+    01:18:0d:0f:38:3b:f4:0b -> 01:18:0d:0f:39:3b:f4:0c     ->    3 VVd:1 ZZ:1
+    01:18:00:10:13:22:3e:c1 -> 01:18:00:10:14:22:3e:c2     ->    4 VVd:1 ZZ:1
+    01:18:00:10:37:2f:0d:f2
+    01:18:00:10:05:30:3e:c1
+    01:18:00:10:0e:30:35:ca
+    01:18:00:10:17:30:2c:d3
+    01:18:11:11:35:08:24:db -> 01:18:11:11:38:08:24:de     ->    7 VVd:3 ZZ:3
+
+Most of the message is the same as the one read from M1, then col 4 changes by
+a different amount (related to number of read entries?), and the last one
+changes by the same amount (checksum?).
