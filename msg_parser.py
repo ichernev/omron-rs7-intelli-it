@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Literal
+from typing import Literal, Callable
 from tools import ints
 
 def b(s): return bytes.fromhex(s.replace(':', ''))
@@ -26,14 +26,13 @@ class Chunk():
                        label=label)
         return init
 
-    def to_json(self, short: bool):
+    def to_json(self, short: bool = False):
         return {
             'raw': pretty_hex(self.raw),
             'int': list(self.raw),
             **({
                 'start': self.start,
                 'sz': self.sz,
-                'end': self.end,
                 'label': self.label,
             } if not short else {}),
         }
@@ -56,7 +55,7 @@ class Message():
             'io': self.io,
             'raw': pretty_hex(self.raw),
             'label': self.label,
-            **{chunk.label: chunk.to_json(short=True) for chunk in self.chunks}
+            **{chunk.label: chunk.to_json() for chunk in self.chunks}
         }
 
     @classmethod
@@ -85,12 +84,30 @@ class Message():
             sz=1,
             label='$msg_cs',
         ))
+        rchunks.sort(key=lambda ch: ch.start)
+        cls.add_const(rchunks, cbuild)
         return cls(raw=raw,
                    chunks=rchunks,
                    **({'label': label} if label is not None else {}),  # type: ignore[arg-type]
                    **({'io': io} if io is not None else {}),  # type: ignore[arg-type]
                    )
 
+    @classmethod
+    def add_const(cls, rchunks: list[Chunk], cbuild: Callable):
+        const_id = 0
+        start = 0
+        cchunks: list[Chunk] = []
+        for chunk in rchunks:
+            if start < chunk.start:
+                cchunks.append(cbuild(
+                    start=start,
+                    sz=chunk.start-start,
+                    label=f'$c:{const_id:0>2}',
+                ))
+                const_id += 1
+            start = chunk.end
+        rchunks.extend(cchunks)
+        rchunks.sort(key=lambda ch: ch.start)
 
 @dataclass(kw_only=True)
 class MessageResM0(Message):
@@ -292,23 +309,3 @@ if __name__ == '__main__':
     hex_lines = json.loads(Path(file).read_bytes())
     trans = Transaction.from_hex_list(hex_lines)
     print(json.dumps(trans.to_json(), indent=2))
-
-    # msgs = [
-    #     MessagePair(
-    #         label='M0',
-    #         req=Message.build(io='in', label='M0', raw=b('08:01:00:02:60:2c:00:47')),
-    #         res=MessageResM0.from_bytes(raw=b('34:81:00:02:60:2c:80:0f:00:0b:00:02:80:00:00:0f:80:00:00:0b:00:00:0a:4d:00:0d:00:0b:00:00:00:00:00:00:90:6f:01:00:00:01:00:17:00:00:00:00:00:00:e6:19:00:2f'))
-    #     ),
-    #     MessagePair(
-    #         label='M1',
-    #         req=Message.build(io='in', label='M1', raw=b('08:01:00:02:8c:10:00:97')),
-    #         res=MessageResM1.from_bytes(raw=b('18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:12:14:26:38:ff:00:00:9a'))
-    #     ),
-    #     MessagePair(
-    #         label='BP',
-    #         req=Message.build(io='in', label='BP', raw=b('08:01:00:08:de:1c:00:c3')),
-    #         res=MessageResBP.from_bytes(raw=b('24:81:00:08:de:1c:53:5c:58:47:06:92:1b:b2:01:00:00:0a:41:be:4c:64:58:46:06:92:0b:fb:00:00:00:0b:08:f7:00:10')),
-    #     )
-    # ]
-
-

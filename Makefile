@@ -49,5 +49,5 @@ parsed/%.txt: dumps_id/%.json
 parsed/%.json: parsed/%.txt
 	python human.py $^ > $@
 
-parsed2/%.json: parsed/%.json
+parsed2/%.json: parsed/%.json msg_parser.py
 	python msg_parser.py $^ > $@
