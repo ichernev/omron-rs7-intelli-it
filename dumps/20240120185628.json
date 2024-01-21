@@ -1,0 +1,3688 @@
+[
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:35.588255000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:35.588255000 UTC",
+          "frame.time_epoch": "1705776995.588255000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.001602000",
+          "frame.time_delta_displayed": "532266.433840000",
+          "frame.time_relative": "532372.131485000",
+          "frame.number": "1962",
+          "frame.len": "16",
+          "frame.cap_len": "16",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "11",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "7",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x08",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x08"
+          },
+          "btatt.starting_handle": "0x0001",
+          "btatt.ending_handle": "0xffff",
+          "btatt.uuid16": "0x2b29"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:35.767152000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:35.767152000 UTC",
+          "frame.time_epoch": "1705776995.767152000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000606000",
+          "frame.time_delta_displayed": "0.178897000",
+          "frame.time_relative": "532372.310382000",
+          "frame.number": "1973",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x01",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x01"
+          },
+          "btatt.req_opcode_in_error": "0x08",
+          "btatt.req_opcode_in_error_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x08"
+          },
+          "btatt.handle": "0x0001",
+          "btatt.handle_tree": {
+            "btatt.uuid16": "0x1800"
+          },
+          "btatt.error_code": "0x0a",
+          "btatt.uuid16": "0x2b29"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.652572000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.652572000 UTC",
+          "frame.time_epoch": "1705776996.652572000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.645829000",
+          "frame.time_delta_displayed": "0.885420000",
+          "frame.time_relative": "532373.195802000",
+          "frame.number": "1975",
+          "frame.len": "12",
+          "frame.cap_len": "12",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "7",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "3",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0a",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0a"
+          },
+          "btatt.handle": "0x0241",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x180a",
+            "btatt.uuid16": "0x2a26"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.695877000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.695877000 UTC",
+          "frame.time_epoch": "1705776996.695877000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.028594000",
+          "frame.time_delta_displayed": "0.043305000",
+          "frame.time_relative": "532373.239107000",
+          "frame.number": "1978",
+          "frame.len": "21",
+          "frame.cap_len": "21",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "16",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "12",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0b"
+          },
+          "btatt.handle": "0x0241",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x180a",
+            "btatt.uuid16": "0x2a26"
+          },
+          "btatt.firmware_revision_string": "D.00.7FB-12",
+          "btatt.request_in_frame": "1975"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.702121000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.702121000 UTC",
+          "frame.time_epoch": "1705776996.702121000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.006244000",
+          "frame.time_delta_displayed": "0.006244000",
+          "frame.time_relative": "532373.245351000",
+          "frame.number": "1979",
+          "frame.len": "12",
+          "frame.cap_len": "12",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "7",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "3",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0a",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0a"
+          },
+          "btatt.handle": "0x0261",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x180a",
+            "btatt.uuid16": "0x2a28"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.755869000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.755869000 UTC",
+          "frame.time_epoch": "1705776996.755869000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.030212000",
+          "frame.time_delta_displayed": "0.053748000",
+          "frame.time_relative": "532373.299099000",
+          "frame.number": "1981",
+          "frame.len": "26",
+          "frame.cap_len": "26",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "21",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "17",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0b"
+          },
+          "btatt.handle": "0x0261",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x180a",
+            "btatt.uuid16": "0x2a28"
+          },
+          "btatt.software_revision_string": "0000000000000105",
+          "btatt.request_in_frame": "1979"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.762831000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.762831000 UTC",
+          "frame.time_epoch": "1705776996.762831000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.006962000",
+          "frame.time_delta_displayed": "0.006962000",
+          "frame.time_relative": "532373.306061000",
+          "frame.number": "1982",
+          "frame.len": "12",
+          "frame.cap_len": "12",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "7",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "3",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0a",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0a"
+          },
+          "btatt.handle": "0x0011",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x1800",
+            "btatt.uuid16": "0x2a00"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.815982000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.815982000 UTC",
+          "frame.time_epoch": "1705776996.815982000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.029263000",
+          "frame.time_delta_displayed": "0.053151000",
+          "frame.time_relative": "532373.359212000",
+          "frame.number": "1984",
+          "frame.len": "24",
+          "frame.cap_len": "24",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "19",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "15",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0b"
+          },
+          "btatt.handle": "0x0011",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x1800",
+            "btatt.uuid16": "0x2a00"
+          },
+          "btatt.device_name": "RS7 Intelli IT",
+          "btatt.request_in_frame": "1982"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.844745000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.844745000 UTC",
+          "frame.time_epoch": "1705776996.844745000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.028763000",
+          "frame.time_delta_displayed": "0.028763000",
+          "frame.time_relative": "532373.387975000",
+          "frame.number": "1985",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0362",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.characteristic_configuration_client": "0x0001",
+          "btatt.characteristic_configuration_client_tree": {
+            "btatt.characteristic_configuration_client.reserved": "0x0000",
+            "btatt.characteristic_configuration_client.indication": "0",
+            "btatt.characteristic_configuration_client.notification": "1"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.905859000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.905859000 UTC",
+          "frame.time_epoch": "1705776996.905859000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.028939000",
+          "frame.time_delta_displayed": "0.061114000",
+          "frame.time_relative": "532373.449089000",
+          "frame.number": "1987",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0362",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.request_in_frame": "1985"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.917318000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.917318000 UTC",
+          "frame.time_epoch": "1705776996.917318000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.011459000",
+          "frame.time_delta_displayed": "0.011459000",
+          "frame.time_relative": "532373.460548000",
+          "frame.number": "1988",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0312",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.characteristic_configuration_client": "0x0001",
+          "btatt.characteristic_configuration_client_tree": {
+            "btatt.characteristic_configuration_client.reserved": "0x0000",
+            "btatt.characteristic_configuration_client.indication": "0",
+            "btatt.characteristic_configuration_client.notification": "1"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:36.966102000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:36.966102000 UTC",
+          "frame.time_epoch": "1705776996.966102000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.030248000",
+          "frame.time_delta_displayed": "0.048784000",
+          "frame.time_relative": "532373.509332000",
+          "frame.number": "1990",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0312",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.request_in_frame": "1988"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.344172000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.344172000 UTC",
+          "frame.time_epoch": "1705776997.344172000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.378070000",
+          "frame.time_delta_displayed": "0.378070000",
+          "frame.time_relative": "532373.887402000",
+          "frame.number": "1991",
+          "frame.len": "29",
+          "frame.cap_len": "29",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "24",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "20",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0311",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "02:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.386911000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.386911000 UTC",
+          "frame.time_epoch": "1705776997.386911000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.030321000",
+          "frame.time_delta_displayed": "0.042739000",
+          "frame.time_relative": "532373.930141000",
+          "frame.number": "1993",
+          "frame.len": "29",
+          "frame.cap_len": "29",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "24",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "20",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0311",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "82:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.448680000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.448680000 UTC",
+          "frame.time_epoch": "1705776997.448680000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.061769000",
+          "frame.time_delta_displayed": "0.061769000",
+          "frame.time_relative": "532373.991910000",
+          "frame.number": "1994",
+          "frame.len": "29",
+          "frame.cap_len": "29",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "24",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "20",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0311",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "01:9d:76:d1:f8:de:86:19:bf:86:85:44:17:c3:48:b9:74"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.506088000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.506088000 UTC",
+          "frame.time_epoch": "1705776997.506088000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.026041000",
+          "frame.time_delta_displayed": "0.057408000",
+          "frame.time_relative": "532374.049318000",
+          "frame.number": "1998",
+          "frame.len": "29",
+          "frame.cap_len": "29",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "24",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "20",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0311",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "81:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.518085000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.518085000 UTC",
+          "frame.time_epoch": "1705776997.518085000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.011997000",
+          "frame.time_delta_displayed": "0.011997000",
+          "frame.time_relative": "532374.061315000",
+          "frame.number": "1999",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0312",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.characteristic_configuration_client": "0x0000",
+          "btatt.characteristic_configuration_client_tree": {
+            "btatt.characteristic_configuration_client.reserved": "0x0000",
+            "btatt.characteristic_configuration_client.indication": "0",
+            "btatt.characteristic_configuration_client.notification": "0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.565860000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.565860000 UTC",
+          "frame.time_epoch": "1705776997.565860000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.029954000",
+          "frame.time_delta_displayed": "0.047775000",
+          "frame.time_relative": "532374.109090000",
+          "frame.number": "2001",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0312",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "b3:05:b6:80:ae:e7:11:e1:a7:30:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.request_in_frame": "1999"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.578313000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.578313000 UTC",
+          "frame.time_epoch": "1705776997.578313000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.012453000",
+          "frame.time_delta_displayed": "0.012453000",
+          "frame.time_relative": "532374.121543000",
+          "frame.number": "2002",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0372",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.characteristic_configuration_client": "0x0001",
+          "btatt.characteristic_configuration_client_tree": {
+            "btatt.characteristic_configuration_client.reserved": "0x0000",
+            "btatt.characteristic_configuration_client.indication": "0",
+            "btatt.characteristic_configuration_client.notification": "1"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.625780000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.625780000 UTC",
+          "frame.time_epoch": "1705776997.625780000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.028046000",
+          "frame.time_delta_displayed": "0.047467000",
+          "frame.time_relative": "532374.169010000",
+          "frame.number": "2004",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0372",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.request_in_frame": "2002"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.635584000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.635584000 UTC",
+          "frame.time_epoch": "1705776997.635584000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.009804000",
+          "frame.time_delta_displayed": "0.009804000",
+          "frame.time_relative": "532374.178814000",
+          "frame.number": "2005",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0382",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "51:28:ce:60:ae:e8:11:e1:b8:4b:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.characteristic_configuration_client": "0x0001",
+          "btatt.characteristic_configuration_client_tree": {
+            "btatt.characteristic_configuration_client.reserved": "0x0000",
+            "btatt.characteristic_configuration_client.indication": "0",
+            "btatt.characteristic_configuration_client.notification": "1"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.687621000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.687621000 UTC",
+          "frame.time_epoch": "1705776997.687621000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.031772000",
+          "frame.time_delta_displayed": "0.052037000",
+          "frame.time_relative": "532374.230851000",
+          "frame.number": "2007",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0382",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "51:28:ce:60:ae:e8:11:e1:b8:4b:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.request_in_frame": "2005"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.698923000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.698923000 UTC",
+          "frame.time_epoch": "1705776997.698923000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.011302000",
+          "frame.time_delta_displayed": "0.011302000",
+          "frame.time_relative": "532374.242153000",
+          "frame.number": "2008",
+          "frame.len": "14",
+          "frame.cap_len": "14",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "9",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "5",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0392",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "56:0f:14:20:ae:e8:11:e1:81:84:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.characteristic_configuration_client": "0x0001",
+          "btatt.characteristic_configuration_client_tree": {
+            "btatt.characteristic_configuration_client.reserved": "0x0000",
+            "btatt.characteristic_configuration_client.indication": "0",
+            "btatt.characteristic_configuration_client.notification": "1"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.745756000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.745756000 UTC",
+          "frame.time_epoch": "1705776997.745756000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.029905000",
+          "frame.time_delta_displayed": "0.046833000",
+          "frame.time_relative": "532374.288986000",
+          "frame.number": "2010",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0392",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.characteristic_uuid128": "56:0f:14:20:ae:e8:11:e1:81:84:00:02:a5:d5:c5:1b",
+            "btatt.uuid16": "0x2902"
+          },
+          "btatt.request_in_frame": "2008"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.780453000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.780453000 UTC",
+          "frame.time_epoch": "1705776997.780453000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.034697000",
+          "frame.time_delta_displayed": "0.034697000",
+          "frame.time_relative": "532374.323683000",
+          "frame.number": "2011",
+          "frame.len": "20",
+          "frame.cap_len": "20",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "15",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "11",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "08:00:00:00:00:10:00:18"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.957096000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.957096000 UTC",
+          "frame.time_epoch": "1705776997.957096000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.150524000",
+          "frame.time_delta_displayed": "0.176643000",
+          "frame.time_relative": "532374.500326000",
+          "frame.number": "2013",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0361",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "18:80:00:00:00:10:00:00:00:94:02:44:ff:ff:ff:ff"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.957916000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.957916000 UTC",
+          "frame.time_epoch": "1705776997.957916000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000820000",
+          "frame.time_delta_displayed": "0.000820000",
+          "frame.time_relative": "532374.501146000",
+          "frame.number": "2014",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0371",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "ff:ff:ff:ff:ff:ff:00:5a:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:37.967790000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:37.967790000 UTC",
+          "frame.time_epoch": "1705776997.967790000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.009874000",
+          "frame.time_delta_displayed": "0.009874000",
+          "frame.time_relative": "532374.511020000",
+          "frame.number": "2015",
+          "frame.len": "12",
+          "frame.cap_len": "12",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "7",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "3",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0a",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0a"
+          },
+          "btatt.handle": "0x0211",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x180a",
+            "btatt.uuid16": "0x2a23"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.016561000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.016561000 UTC",
+          "frame.time_epoch": "1705776998.016561000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.030311000",
+          "frame.time_delta_displayed": "0.048771000",
+          "frame.time_relative": "532374.559791000",
+          "frame.number": "2017",
+          "frame.len": "18",
+          "frame.cap_len": "18",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "13",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "9",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x0b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x0b"
+          },
+          "btatt.handle": "0x0211",
+          "btatt.handle_tree": {
+            "btatt.service_uuid16": "0x180a",
+            "btatt.uuid16": "0x2a23"
+          },
+          "btatt.system_id.manufacturer_identifier": "0x000000fffef69c32",
+          "btatt.system_id.organizationally_unique_identifier": "24511",
+          "btatt.request_in_frame": "2015"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.027605000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.027605000 UTC",
+          "frame.time_epoch": "1705776998.027605000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.011044000",
+          "frame.time_delta_displayed": "0.011044000",
+          "frame.time_relative": "532374.570835000",
+          "frame.number": "2018",
+          "frame.len": "20",
+          "frame.cap_len": "20",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "15",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "11",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "08:01:00:02:60:2c:00:47"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.196994000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.196994000 UTC",
+          "frame.time_epoch": "1705776998.196994000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.150270000",
+          "frame.time_delta_displayed": "0.169389000",
+          "frame.time_relative": "532374.740224000",
+          "frame.number": "2021",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0361",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "34:81:00:02:60:2c:80:0f:00:0b:00:02:80:00:00:0f"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.197688000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.197688000 UTC",
+          "frame.time_epoch": "1705776998.197688000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000694000",
+          "frame.time_delta_displayed": "0.000694000",
+          "frame.time_relative": "532374.740918000",
+          "frame.number": "2022",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0371",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "80:00:00:0b:00:00:0a:4d:00:0d:00:0b:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.198087000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.198087000 UTC",
+          "frame.time_epoch": "1705776998.198087000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000399000",
+          "frame.time_delta_displayed": "0.000399000",
+          "frame.time_relative": "532374.741317000",
+          "frame.number": "2023",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0381",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "51:28:ce:60:ae:e8:11:e1:b8:4b:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "00:00:90:6f:01:00:00:01:00:17:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.198690000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.198690000 UTC",
+          "frame.time_epoch": "1705776998.198690000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000603000",
+          "frame.time_delta_displayed": "0.000603000",
+          "frame.time_relative": "532374.741920000",
+          "frame.number": "2024",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0391",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "56:0f:14:20:ae:e8:11:e1:81:84:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "e6:19:00:2f:00:00:00:00:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.208602000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.208602000 UTC",
+          "frame.time_epoch": "1705776998.208602000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.009912000",
+          "frame.time_delta_displayed": "0.009912000",
+          "frame.time_relative": "532374.751832000",
+          "frame.number": "2025",
+          "frame.len": "20",
+          "frame.cap_len": "20",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "15",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "11",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "08:01:00:02:8c:10:00:97"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.346670000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.346670000 UTC",
+          "frame.time_epoch": "1705776998.346670000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.120673000",
+          "frame.time_delta_displayed": "0.138068000",
+          "frame.time_relative": "532374.889900000",
+          "frame.number": "2027",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0361",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.347707000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.347707000 UTC",
+          "frame.time_epoch": "1705776998.347707000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.001037000",
+          "frame.time_delta_displayed": "0.001037000",
+          "frame.time_relative": "532374.890937000",
+          "frame.number": "2028",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0371",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "12:14:26:38:ff:00:00:9a:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.491042000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.491042000 UTC",
+          "frame.time_epoch": "1705776998.491042000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.143335000",
+          "frame.time_delta_displayed": "0.143335000",
+          "frame.time_relative": "532375.034272000",
+          "frame.number": "2029",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "18:01:c0:02:a4:10:80:0f:00:0b:00:02:80:00:00:0f"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.556802000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.556802000 UTC",
+          "frame.time_epoch": "1705776998.556802000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.060288000",
+          "frame.time_delta_displayed": "0.065760000",
+          "frame.time_relative": "532375.100032000",
+          "frame.number": "2031",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.request_in_frame": "2029"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.564619000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.564619000 UTC",
+          "frame.time_epoch": "1705776998.564619000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.007817000",
+          "frame.time_delta_displayed": "0.007817000",
+          "frame.time_relative": "532375.107849000",
+          "frame.number": "2032",
+          "frame.len": "20",
+          "frame.cap_len": "20",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "15",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "11",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0331",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "e0:b8:a0:60:ae:e7:11:e1:92:f4:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "80:00:00:0b:00:00:00:ed"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.736637000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.736637000 UTC",
+          "frame.time_epoch": "1705776998.736637000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.149652000",
+          "frame.time_delta_displayed": "0.172018000",
+          "frame.time_relative": "532375.279867000",
+          "frame.number": "2034",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0361",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "18:81:c0:02:a4:10:80:0f:00:0b:00:02:80:00:00:0f"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.737880000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.737880000 UTC",
+          "frame.time_epoch": "1705776998.737880000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000526000",
+          "frame.time_delta_displayed": "0.001243000",
+          "frame.time_relative": "532375.281110000",
+          "frame.number": "2036",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0371",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "80:00:00:0b:00:00:00:6d:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.744701000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.744701000 UTC",
+          "frame.time_epoch": "1705776998.744701000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.006821000",
+          "frame.time_delta_displayed": "0.006821000",
+          "frame.time_relative": "532375.287931000",
+          "frame.number": "2037",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "26:01:c0:02:c2:1e:01:00:00:01:00:19:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.795944000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.795944000 UTC",
+          "frame.time_epoch": "1705776998.795944000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.029568000",
+          "frame.time_delta_displayed": "0.051243000",
+          "frame.time_relative": "532375.339174000",
+          "frame.number": "2039",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.request_in_frame": "2037"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.801694000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.801694000 UTC",
+          "frame.time_epoch": "1705776998.801694000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.005750000",
+          "frame.time_delta_displayed": "0.005750000",
+          "frame.time_relative": "532375.344924000",
+          "frame.number": "2040",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x12",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0331",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "e0:b8:a0:60:ae:e7:11:e1:92:f4:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "00:00:e6:1b:a0:c0:00:03:00:00:00:00:01:18:12:14"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.855776000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.855776000 UTC",
+          "frame.time_epoch": "1705776998.855776000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.029847000",
+          "frame.time_delta_displayed": "0.054082000",
+          "frame.time_relative": "532375.399006000",
+          "frame.number": "2042",
+          "frame.len": "10",
+          "frame.cap_len": "10",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "5",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "1",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x13",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x13"
+          },
+          "btatt.handle": "0x0331",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "e0:b8:a0:60:ae:e7:11:e1:92:f4:00:02:a5:d5:c5:1b"
+          },
+          "btatt.request_in_frame": "2040"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:38.862407000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:38.862407000 UTC",
+          "frame.time_epoch": "1705776998.862407000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.006631000",
+          "frame.time_delta_displayed": "0.006631000",
+          "frame.time_relative": "532375.405637000",
+          "frame.number": "2043",
+          "frame.len": "18",
+          "frame.cap_len": "18",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "13",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "9",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0341",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "0a:e1:2b:00:ae:e8:11:e1:a1:92:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "27:38:ff:01:00:40"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:39.126670000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:39.126670000 UTC",
+          "frame.time_epoch": "1705776999.126670000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.240683000",
+          "frame.time_delta_displayed": "0.264263000",
+          "frame.time_relative": "532375.669900000",
+          "frame.number": "2045",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0361",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "26:81:c0:02:c2:1e:01:00:00:01:00:19:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:39.127894000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:39.127894000 UTC",
+          "frame.time_epoch": "1705776999.127894000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.001224000",
+          "frame.time_delta_displayed": "0.001224000",
+          "frame.time_relative": "532375.671124000",
+          "frame.number": "2046",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0371",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "4d:0b:f3:20:ae:e8:11:e1:a0:d9:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "00:00:e6:1b:a0:c0:00:03:00:00:00:00:01:18:12:14"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:39.128310000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:39.128310000 UTC",
+          "frame.time_epoch": "1705776999.128310000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000416000",
+          "frame.time_delta_displayed": "0.000416000",
+          "frame.time_relative": "532375.671540000",
+          "frame.number": "2047",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0381",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "51:28:ce:60:ae:e8:11:e1:b8:4b:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "27:38:ff:01:00:c0:00:00:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:39.142420000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:39.142420000 UTC",
+          "frame.time_epoch": "1705776999.142420000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.014110000",
+          "frame.time_delta_displayed": "0.014110000",
+          "frame.time_relative": "532375.685650000",
+          "frame.number": "2048",
+          "frame.len": "20",
+          "frame.cap_len": "20",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "0",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.src": "54:08:3b:c0:e8:55",
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.dst": "00:5f:bf:f6:9c:32"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x00",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "0",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "15",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.src.name": "Fairphone 5 5G",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.dst.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "11",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x52",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "1",
+            "btatt.opcode.method": "0x12"
+          },
+          "btatt.handle": "0x0321",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "db:5b:55:e0:ae:e7:11:e1:96:5e:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "08:0f:00:00:00:00:00:07"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2024-01-20",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "99",
+          "frame.time": "Jan 20, 2024 20:56:39.306638000 EET",
+          "frame.time_utc": "Jan 20, 2024 18:56:39.306638000 UTC",
+          "frame.time_epoch": "1705776999.306638000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.150536000",
+          "frame.time_delta_displayed": "0.164218000",
+          "frame.time_relative": "532375.849868000",
+          "frame.number": "2050",
+          "frame.len": "28",
+          "frame.cap_len": "28",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.p2p_dir": "1",
+          "frame.protocols": "bluetooth:hci_h4:bthci_acl:btl2cap:btatt"
+        },
+        "bluetooth": {
+          "bluetooth.addr": "00:5f:bf:f6:9c:32",
+          "bluetooth.src": "00:5f:bf:f6:9c:32",
+          "bluetooth.addr": "54:08:3b:c0:e8:55",
+          "bluetooth.dst": "54:08:3b:c0:e8:55"
+        },
+        "hci_h4": {
+          "hci_h4.direction": "0x01",
+          "hci_h4.type": "0x02"
+        },
+        "bthci_acl": {
+          "bthci_acl.chandle": "0x0002",
+          "bthci_acl.pb_flag": "2",
+          "bthci_acl.bc_flag": "0",
+          "bthci_acl.length": "23",
+          "bthci_acl.data": "",
+          "bthci_acl.connect_in": "1947",
+          "bthci_acl.disconnect_in": "2056",
+          "bthci_acl.src.bd_addr": "00:5f:bf:f6:9c:32",
+          "bthci_acl.src.name": "BLESmart_00000244005FBFF69C32",
+          "bthci_acl.src.role": "0",
+          "bthci_acl.dst.bd_addr": "54:08:3b:c0:e8:55",
+          "bthci_acl.dst.name": "Fairphone 5 5G",
+          "bthci_acl.dst.role": "0",
+          "bthci_acl.mode": "-1"
+        },
+        "btl2cap": {
+          "btl2cap.length": "19",
+          "btl2cap.cid": "0x0004"
+        },
+        "btatt": {
+          "btatt.opcode": "0x1b",
+          "btatt.opcode_tree": {
+            "btatt.opcode.authentication_signature": "0",
+            "btatt.opcode.command": "0",
+            "btatt.opcode.method": "0x1b"
+          },
+          "btatt.handle": "0x0361",
+          "btatt.handle_tree": {
+            "btatt.service_uuid128": "ec:be:39:80:c9:a2:11:e1:b1:bd:00:02:a5:d5:c5:1b",
+            "btatt.uuid128": "49:12:30:40:ae:e8:11:e1:a7:4d:00:02:a5:d5:c5:1b"
+          },
+          "btatt.value": "08:8f:00:00:00:00:00:87:00:00:00:00:00:00:00:00"
+        }
+      }
+    }
+  }
+]

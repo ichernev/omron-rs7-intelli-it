@@ -45,6 +45,12 @@ transfer.
   - 120 77 73 17:04 jan 17 (low error)
   - 89 50 74  17:06 jan 17 (high error)
   - 111 73 79 17:07 jan 17
+- 07 2 meas (in one trans): 20240120185324
+  - 117 83 71 18:46 jan 20
+  - 125 76 70 18:47 jan 20
+  - synced at 18:53 (+5min) jan 20
+- 08 empty: 20240120185628
+  - synced at 18:56 (+3min) jan 20
 
 # Findings
 
@@ -208,7 +214,7 @@ This message is echoed back from the device, I assume it's a write.
 I guess c0:02 is write comman and the next two bytes are pos+len
 
     [4: 1 meas]
-
+                     |->
     26:81:c0:02:c2:1e:01:00:00:01:00:0b:00:00:00:00:
                    len               ??
              --|--
