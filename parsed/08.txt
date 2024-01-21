@@ -22,26 +22,22 @@
 0x0a read req 0x180a 0x2a23 None -- None
 0x0b read res 0x180a 0x2a23 None -- btatt.system_id.manufacturer_identifier: 0x000000fffef69c32
 0x52 write ecbe- i00 None -- 08:01:00:02:60:2c:00:47
-0x1b notif ecbe- o00 None -- 34:81:00:02:60:2c:80:0f:00:0b:00:02:00:02:00:0f
+0x1b notif ecbe- o00 None -- 34:81:00:02:60:2c:80:0f:00:0b:00:02:80:00:00:0f
 0x1b notif ecbe- o01 None -- 80:00:00:0b:00:00:0a:4d:00:0d:00:0b:00:00:00:00
-0x1b notif ecbe- o02 None -- 00:00:90:6f:01:00:00:01:00:15:00:00:00:00:00:00
-0x1b notif ecbe- o03 None -- e8:17:00:af:00:00:00:00:00:00:00:00:00:00:00:00
+0x1b notif ecbe- o02 None -- 00:00:90:6f:01:00:00:01:00:17:00:00:00:00:00:00
+0x1b notif ecbe- o03 None -- e6:19:00:2f:00:00:00:00:00:00:00:00:00:00:00:00
 0x52 write ecbe- i00 None -- 08:01:00:02:8c:10:00:97
 0x1b notif ecbe- o00 None -- 18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18
-0x1b notif ecbe- o01 None -- 12:14:25:35:03:fc:00:94:00:00:00:00:00:00:00:00
-0x52 write ecbe- i00 None -- 08:01:00:08:de:1c:00:c3
-0x1b notif ecbe- o00 None -- 24:81:00:08:de:1c:53:5c:58:47:06:92:1b:b2:01:00
-0x1b notif ecbe- o01 None -- 00:0a:41:be:4c:64:58:46:06:92:0b:fb:00:00:00:0b
-0x1b notif ecbe- o02 None -- 08:f7:00:10:00:00:00:00:00:00:00:00:00:00:00:00
+0x1b notif ecbe- o01 None -- 12:14:26:38:ff:00:00:9a:00:00:00:00:00:00:00:00
 0x12 Write ecbe- i00 None -- 18:01:c0:02:a4:10:80:0f:00:0b:00:02:80:00:00:0f
 0x52 write ecbe- i01 None -- 80:00:00:0b:00:00:00:ed
 0x1b notif ecbe- o00 None -- 18:81:c0:02:a4:10:80:0f:00:0b:00:02:80:00:00:0f
 0x1b notif ecbe- o01 None -- 80:00:00:0b:00:00:00:6d:00:00:00:00:00:00:00:00
-0x12 Write ecbe- i00 None -- 26:01:c0:02:c2:1e:01:00:00:01:00:17:00:00:00:00
-0x12 Write ecbe- i01 None -- 00:00:e8:19:a0:c0:00:03:00:00:00:00:01:18:12:14
-0x52 write ecbe- i02 None -- 23:35:03:fa:00:4c
-0x1b notif ecbe- o00 None -- 26:81:c0:02:c2:1e:01:00:00:01:00:17:00:00:00:00
-0x1b notif ecbe- o01 None -- 00:00:e8:19:a0:c0:00:03:00:00:00:00:01:18:12:14
-0x1b notif ecbe- o02 None -- 23:35:03:fa:00:cc:00:00:00:00:00:00:00:00:00:00
+0x12 Write ecbe- i00 None -- 26:01:c0:02:c2:1e:01:00:00:01:00:19:00:00:00:00
+0x12 Write ecbe- i01 None -- 00:00:e6:1b:a0:c0:00:03:00:00:00:00:01:18:12:14
+0x52 write ecbe- i02 None -- 27:38:ff:01:00:40
+0x1b notif ecbe- o00 None -- 26:81:c0:02:c2:1e:01:00:00:01:00:19:00:00:00:00
+0x1b notif ecbe- o01 None -- 00:00:e6:1b:a0:c0:00:03:00:00:00:00:01:18:12:14
+0x1b notif ecbe- o02 None -- 27:38:ff:01:00:c0:00:00:00:00:00:00:00:00:00:00
 0x52 write ecbe- i00 None -- 08:0f:00:00:00:00:00:07
 0x1b notif ecbe- o00 None -- 08:8f:00:00:00:00:00:87:00:00:00:00:00:00:00:00
