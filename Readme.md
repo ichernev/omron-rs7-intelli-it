@@ -164,8 +164,8 @@ measurement, or a multiple for more).
                       -----------------------------------------    -> 14 bytes
 
      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19    -> position
-                     dia   flags  -----------         cs1          -> decimal
-                        sys   pulse    ts                cs2
+                     dia   flags  ----------- fl2        cs1       -> decimal
+                        sys   pulse    ts                   cs2
     sys = b[7] + 25
     dia = b[6]
     pulse = b[9]
@@ -178,6 +178,15 @@ measurement, or a multiple for more).
 
     b[10:14] look like timestamp, for multiple measurements in same transaction
              it seems reasonble, but across transactions it's too off
+
+    b[10:12] -- ts hi (but no coef can make it into seconds, stable across
+                       transactions)
+    b[12] & 0xf, b[13] - ts lo --> these look a LOT like seconds esp in between
+                                   measurements in a transaction
+    b[12] & 0xf0 -- seems to be a flagset
+            0x10 -- bad wristcuff?
+
+    b[14] --> almost always 0x00, but 0x01 in 07/first, no idea
 
     # two byte checksum
     b[18] = 255 - b[19]
