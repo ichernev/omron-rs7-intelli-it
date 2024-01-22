@@ -419,15 +419,6 @@
           "io": "other",
           "raw": "41:59:58:4d:05:ed:1e:94:00:00:00:04:18:e7",
           "label": "bp-item:00",
-          "$msg_size": {
-            "raw": "41",
-            "int": [
-              65
-            ],
-            "start": 0,
-            "sz": 1,
-            "label": "$msg_size"
-          },
           "dia": {
             "raw": "41",
             "int": [
@@ -436,15 +427,6 @@
             "start": 0,
             "sz": 1,
             "label": "dia"
-          },
-          "$msg_io": {
-            "raw": "59",
-            "int": [
-              89
-            ],
-            "start": 1,
-            "sz": 1,
-            "label": "$msg_io"
           },
           "sys": {
             "raw": "59",
@@ -495,25 +477,33 @@
             "label": "fl2"
           },
           "$c:00": {
-            "raw": "00:00:04:18",
+            "raw": "00:00",
             "int": [
               0,
-              0,
-              4,
-              24
+              0
             ],
             "start": 9,
-            "sz": 4,
+            "sz": 2,
             "label": "$c:00"
           },
-          "$msg_cs": {
-            "raw": "e7",
+          "pos": {
+            "raw": "04",
             "int": [
+              4
+            ],
+            "start": 11,
+            "sz": 1,
+            "label": "pos"
+          },
+          "cs": {
+            "raw": "18:e7",
+            "int": [
+              24,
               231
             ],
-            "start": 13,
-            "sz": 1,
-            "label": "$msg_cs"
+            "start": 12,
+            "sz": 2,
+            "label": "cs"
           }
         }
       ]

@@ -59,31 +59,34 @@ class Message():
         }
 
     @classmethod
-    def build(cls, raw: bytes, chunks: list[ProtoChunk] = [], label: str | None = None, io: io_t | None = None):
+    def build(cls, raw: bytes, chunks: list[ProtoChunk] = [], label: str | None = None, io: io_t | None = None, complete: bool = False):
         cbuild = Chunk.builder(raw)
         rchunks: list[Chunk] = []
-        rchunks.append(cbuild(
-            start=0,
-            sz=1,
-            label='$msg_size',
-        ))
-        rchunks.append(cbuild(
-            start=1,
-            sz=1,
-            label='$msg_io',
-        ))
-        last_end = 2
+        last_end = 0
+        if not complete:
+            rchunks.append(cbuild(
+                start=0,
+                sz=1,
+                label='$msg_size',
+            ))
+            rchunks.append(cbuild(
+                start=1,
+                sz=1,
+                label='$msg_io',
+            ))
+            last_end = 2
         for i, pchunk in enumerate(chunks):
             rchunks.append(cbuild(
                 start=pchunk.start if pchunk.start is not None else last_end,
                 sz=pchunk.sz,
                 label=pchunk.label))
             last_end = rchunks[-1].end
-        rchunks.append(cbuild(
-            start=len(raw) - 1,
-            sz=1,
-            label='$msg_cs',
-        ))
+        if not complete:
+            rchunks.append(cbuild(
+                start=len(raw) - 1,
+                sz=1,
+                label='$msg_cs',
+            ))
         rchunks.sort(key=lambda ch: ch.start)
         cls.add_const(rchunks, cbuild)
         return cls(raw=raw,
@@ -157,7 +160,10 @@ class MessageBPItem(Message):
                 ProtoChunk(start=0x03, sz=1, label='pulse'),
                 ProtoChunk(start=0x04, sz=4, label='ts'),
                 ProtoChunk(start=0x08, sz=1, label='fl2'),
-            ])
+                ProtoChunk(start=0x0b, sz=1, label='pos'),
+                ProtoChunk(start=0x0c, sz=2, label='cs'),
+            ],
+            complete=True)
 
 
 @dataclass(kw_only=True)

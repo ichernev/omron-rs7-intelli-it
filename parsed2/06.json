@@ -419,15 +419,6 @@
           "io": "other",
           "raw": "4c:5d:58:4c:06:31:10:dd:00:00:00:06:88:77",
           "label": "bp-item:00",
-          "$msg_size": {
-            "raw": "4c",
-            "int": [
-              76
-            ],
-            "start": 0,
-            "sz": 1,
-            "label": "$msg_size"
-          },
           "dia": {
             "raw": "4c",
             "int": [
@@ -436,15 +427,6 @@
             "start": 0,
             "sz": 1,
             "label": "dia"
-          },
-          "$msg_io": {
-            "raw": "5d",
-            "int": [
-              93
-            ],
-            "start": 1,
-            "sz": 1,
-            "label": "$msg_io"
           },
           "sys": {
             "raw": "5d",
@@ -495,40 +477,39 @@
             "label": "fl2"
           },
           "$c:00": {
-            "raw": "00:00:06:88",
+            "raw": "00:00",
             "int": [
               0,
-              0,
-              6,
-              136
+              0
             ],
             "start": 9,
-            "sz": 4,
+            "sz": 2,
             "label": "$c:00"
           },
-          "$msg_cs": {
-            "raw": "77",
+          "pos": {
+            "raw": "06",
             "int": [
+              6
+            ],
+            "start": 11,
+            "sz": 1,
+            "label": "pos"
+          },
+          "cs": {
+            "raw": "88:77",
+            "int": [
+              136,
               119
             ],
-            "start": 13,
-            "sz": 1,
-            "label": "$msg_cs"
+            "start": 12,
+            "sz": 2,
+            "label": "cs"
           }
         },
         {
           "io": "other",
           "raw": "4d:5f:d8:49:06:31:11:2d:00:00:00:07:b6:49",
           "label": "bp-item:01",
-          "$msg_size": {
-            "raw": "4d",
-            "int": [
-              77
-            ],
-            "start": 0,
-            "sz": 1,
-            "label": "$msg_size"
-          },
           "dia": {
             "raw": "4d",
             "int": [
@@ -537,15 +518,6 @@
             "start": 0,
             "sz": 1,
             "label": "dia"
-          },
-          "$msg_io": {
-            "raw": "5f",
-            "int": [
-              95
-            ],
-            "start": 1,
-            "sz": 1,
-            "label": "$msg_io"
           },
           "sys": {
             "raw": "5f",
@@ -596,40 +568,39 @@
             "label": "fl2"
           },
           "$c:00": {
-            "raw": "00:00:07:b6",
+            "raw": "00:00",
             "int": [
               0,
-              0,
-              7,
-              182
+              0
             ],
             "start": 9,
-            "sz": 4,
+            "sz": 2,
             "label": "$c:00"
           },
-          "$msg_cs": {
-            "raw": "49",
+          "pos": {
+            "raw": "07",
             "int": [
+              7
+            ],
+            "start": 11,
+            "sz": 1,
+            "label": "pos"
+          },
+          "cs": {
+            "raw": "b6:49",
+            "int": [
+              182,
               73
             ],
-            "start": 13,
-            "sz": 1,
-            "label": "$msg_cs"
+            "start": 12,
+            "sz": 2,
+            "label": "cs"
           }
         },
         {
           "io": "other",
           "raw": "32:40:98:4a:06:31:11:82:00:00:00:08:d9:26",
           "label": "bp-item:02",
-          "$msg_size": {
-            "raw": "32",
-            "int": [
-              50
-            ],
-            "start": 0,
-            "sz": 1,
-            "label": "$msg_size"
-          },
           "dia": {
             "raw": "32",
             "int": [
@@ -638,15 +609,6 @@
             "start": 0,
             "sz": 1,
             "label": "dia"
-          },
-          "$msg_io": {
-            "raw": "40",
-            "int": [
-              64
-            ],
-            "start": 1,
-            "sz": 1,
-            "label": "$msg_io"
           },
           "sys": {
             "raw": "40",
@@ -697,40 +659,39 @@
             "label": "fl2"
           },
           "$c:00": {
-            "raw": "00:00:08:d9",
+            "raw": "00:00",
             "int": [
               0,
-              0,
-              8,
-              217
+              0
             ],
             "start": 9,
-            "sz": 4,
+            "sz": 2,
             "label": "$c:00"
           },
-          "$msg_cs": {
-            "raw": "26",
+          "pos": {
+            "raw": "08",
             "int": [
+              8
+            ],
+            "start": 11,
+            "sz": 1,
+            "label": "pos"
+          },
+          "cs": {
+            "raw": "d9:26",
+            "int": [
+              217,
               38
             ],
-            "start": 13,
-            "sz": 1,
-            "label": "$msg_cs"
+            "start": 12,
+            "sz": 2,
+            "label": "cs"
           }
         },
         {
           "io": "other",
           "raw": "49:56:58:4f:06:31:11:ca:00:00:00:09:9e:61",
           "label": "bp-item:03",
-          "$msg_size": {
-            "raw": "49",
-            "int": [
-              73
-            ],
-            "start": 0,
-            "sz": 1,
-            "label": "$msg_size"
-          },
           "dia": {
             "raw": "49",
             "int": [
@@ -739,15 +700,6 @@
             "start": 0,
             "sz": 1,
             "label": "dia"
-          },
-          "$msg_io": {
-            "raw": "56",
-            "int": [
-              86
-            ],
-            "start": 1,
-            "sz": 1,
-            "label": "$msg_io"
           },
           "sys": {
             "raw": "56",
@@ -798,25 +750,33 @@
             "label": "fl2"
           },
           "$c:00": {
-            "raw": "00:00:09:9e",
+            "raw": "00:00",
             "int": [
               0,
-              0,
-              9,
-              158
+              0
             ],
             "start": 9,
-            "sz": 4,
+            "sz": 2,
             "label": "$c:00"
           },
-          "$msg_cs": {
-            "raw": "61",
+          "pos": {
+            "raw": "09",
             "int": [
+              9
+            ],
+            "start": 11,
+            "sz": 1,
+            "label": "pos"
+          },
+          "cs": {
+            "raw": "9e:61",
+            "int": [
+              158,
               97
             ],
-            "start": 13,
-            "sz": 1,
-            "label": "$msg_cs"
+            "start": 12,
+            "sz": 2,
+            "label": "cs"
           }
         }
       ]
