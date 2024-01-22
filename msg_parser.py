@@ -122,6 +122,8 @@ class MessageResM0(Message):
                 ProtoChunk(start=0x09, sz=1, label='last'),
                 ProtoChunk(start=0x0c, sz=1, label='pend_pref'),
                 ProtoChunk(start=0x0d, sz=1, label='pend'),
+                ProtoChunk(start=0x13, sz=1, label='last2'),
+                ProtoChunk(start=0x14, sz=1, label='fl1'),
                 ProtoChunk(start=0x29, sz=1, label='it'),
                 ProtoChunk(start=0x30, sz=2, label='cs'),
             ])
@@ -239,7 +241,7 @@ class Transaction():
     pairs: list[MessagePair]
 
     def to_json(self):
-        return [pair.to_json() for pair in self.pairs]
+        return {pair.label: pair.to_json() for pair in self.pairs}
 
     @classmethod
     def from_hex_list(cls, hex_list: list[str]):
