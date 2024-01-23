@@ -176,15 +176,13 @@ measurement, or a multiple for more).
     11011000 -- device too low
     10011000 -- device too high
 
-    b[10:14] look like timestamp, for multiple measurements in same transaction
-             it seems reasonble, but across transactions it's too off
-
-    b[10:12] -- ts hi (but no coef can make it into seconds, stable across
-                       transactions)
-    b[12] & 0xf, b[13] - ts lo --> these look a LOT like seconds esp in between
-                                   measurements in a transaction
-    b[12] & 0xf0 -- seems to be a flagset
-            0x10 -- bad wristcuff?
+    b[10:14] - month, date, hour, minute, second + flags
+        bit 2:06 -- month (1-12)
+        bit 6:11 -- date  (1-31)
+        bit 11:16 -- hour (0-23)
+        bit 20:26 -- min (0-59)
+        bit 26:32 -- sec (0-59) -- pretty sure, will verify
+        bit 19 -- 1 means cuff ok, 0 means not ok
 
     b[14] --> almost always 0x00, but 0x01 in 07/first, no idea
 
