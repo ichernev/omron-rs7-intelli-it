@@ -153,8 +153,8 @@ Not sure what this is, but it is "written back" in M3 with minor corrections.
 
 ## Device memory read (blood pressure measurement)
 
-The message is in response to 08:01:00:08:XX:YY:00:CS request.
-Where XX is the start memory offset, and YY is the length (0e ~ 14 for one
+The message is in response to 08:01:00:AA:XX:YY:00:CS request.
+Where AA:XX is the start memory offset, and YY is the length (0e ~ 14 for one
 measurement, or a multiple for more).
 
     Response
@@ -195,6 +195,9 @@ measurement, or a multiple for more).
 
 Also the second write-respond request 26:01:c0:02:c2:1e:01 is longer when there
 is a measurement reported.
+
+It looks like the start address is 08:60, and the upper bound is 0d:d8 (for 100
+measurements). After it wraps over I'll have a better idea.
 
 ## M2 18:01:c0:02:a4:10
 

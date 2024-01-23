@@ -187,6 +187,9 @@ class MessageResBP(Message):
                    for i in range(sz)]
         )
 
+    def merge(self, other):
+        self.items.extend(other.items)
+
 
 @dataclass(kw_only=True)
 class MessageReqM2(Message):
@@ -269,13 +272,19 @@ class Transaction():
                     req=Message.build(io='in', label=label, raw=req_b),
                     res=MessageResM1.from_bytes(raw=res_b),
                 ))
-            elif req_b[2:4] == b('00:08'):
+            elif req_b[2] == 0x0 and 0x8 <= req_b[3] and req_b[3] <= 0xd:
                 label = 'BP'
-                pairs.append(MessagePair(
+                mp = MessagePair(
                     label='BP',
                     req=Message.build(io='in', label=label, raw=req_b),
                     res=MessageResBP.from_bytes(raw=res_b),
-                ))
+                )
+                if pairs[-1].label != 'BP':
+                    pairs.append(mp)
+                else:
+                    # we combine all the BP measurements, and let the first req
+                    # (it will be "wrong' but we don't really care.
+                    pairs[-1].res.merge(mp.res)
             elif req_b[2:6] == b('c0:02:a4:10'):
                 label = 'M2'
                 assert req_b[2:-2] == res_b[2:-2]
