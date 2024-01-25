@@ -13,6 +13,12 @@ def parse_args(args):
                         help='key=val1,val2 where key in (id,io,msg,label,path)')
     parser.add_argument('--summary', action='store_true',
                         help="Display overall stats")
+    parser.add_argument('--addr', action='store_true',
+                        help="Display chunk address")
+    parser.add_argument('--line', type=int,
+                        help="put a few matches per line (matching that many path components)")
+    parser.add_argument('--int', action='store_true',
+                        help="Output ints, not hex")
     return parser.parse_args(args)
 
 def load_data(inp: str):
@@ -70,23 +76,65 @@ class Observer():
         self._items.append((path, leaf))
         # print(f'{".".join(path)}  {leaf["raw"]}')
 
-    def show(self, table: bool = True):
-        if table:
-            len_jpaths = [len('.'.join(path)) for path, data in self._items]
-            space = max(len_jpaths)
+    def show(self, pad: bool = True, addr: bool = False, line: int = None, ints: bool = False):
+        tdata = []
+        if line is None:
             for path, data in self._items:
                 jpath = '.'.join(path)
-                padded = jpath + ' ' * (space - len(jpath))
-                print(f"{padded} {data['raw']}")
+                d_raw = [data['raw']] if not ints else list(map(str, data['int']))
+                if addr:
+                    addr_s = f"{data['start']:0>2x}:{data['start'] + data['sz']:0>2x}"
+                    items = [jpath, addr_s, *d_raw]
+                else:
+                    items = [jpath, *d_raw]
+                tdata.append(items)
         else:
+            last_match = None
             for path, data in self._items:
-                print(f"{'.'.join(path)} {data['raw']}")
+                jpath = '.'.join(path)
+                d_raw = [data['raw']] if not ints else list(map(str, data['int']))
+                addr_s = f" {data['start']:0>2x}:{data['start'] + data['sz']:0>2x}" if addr else None
 
-    def summary(self):
-        nitems = len(self._items)
-        uniq = len(set(data['raw'] for _, data in self._items))
+                match = '.'.join(path[:line])
+                if match == last_match:
+                    if addr_s:
+                        tdata[-1].append(addr_s)
+                    tdata[-1].extend(d_raw)
+                else:
+                    last_match = match
+                    if addr_s:
+                        tdata.append([match, addr_s, *d_raw])
+                    else:
+                        tdata.append([match, *d_raw])
+        max_col_w = [0] * max(len(tdata_line) for tdata_line in tdata)
+        for tdata_line in tdata:
+            for i, item in enumerate(tdata_line):
+                max_col_w[i] = max(max_col_w[i], len(item))
 
-        print(f"items={nitems} unique={uniq}")
+        for tdata_line in tdata:
+            line = []
+            for i, item in enumerate(tdata_line):
+                padding = ' ' * (max_col_w[i] - len(item)) if pad else ''
+                line.append(padding + item)
+            print(' '.join(line))
+
+        self._tdata = tdata
+        self._max_col_w = max_col_w
+
+    def summary(self, pad: bool = True):
+        tdata = self._tdata
+        max_col_w = self._max_col_w
+        items = [f'{len(self._tdata)}']
+        for col in range(1, len(max_col_w)):
+            uniq = len(set(tdata[i][col] for i in range(len(tdata))
+                           if col < len(tdata[i])))
+            items.append(f'{uniq}')
+
+        line = []
+        for i, item in enumerate(items):
+            padding = ' ' * (max_col_w[i] - len(item)) if pad else ''
+            line.append(padding + item)
+        print(' '.join(line))
 
 def main(opts):
     data = load_data(opts.input)
@@ -94,9 +142,9 @@ def main(opts):
     if opts.debug:
         print(json.dumps(data, indent=2))
         return
-    obs = Observer(opts.filter)
+    obs = Observer(opts.filter or [])
     iter_leafs(data, level=0, cb=obs)
-    obs.show()
+    obs.show(addr=opts.addr, line=opts.line, ints=opts.int)
     if opts.summary:
         obs.summary()
 
