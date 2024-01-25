@@ -122,11 +122,12 @@ class MessageResM0(Message):
         return cls.build(
             io=cls.io,
             raw=raw, chunks=[
+                ProtoChunk(start=0x08, sz=1, label='fl1'),
                 ProtoChunk(start=0x09, sz=1, label='last'),
-                ProtoChunk(start=0x0c, sz=1, label='pend_pref'),
+                ProtoChunk(start=0x0c, sz=1, label='fl2'),
                 ProtoChunk(start=0x0d, sz=1, label='pend'),
                 ProtoChunk(start=0x13, sz=1, label='last2'),
-                ProtoChunk(start=0x14, sz=1, label='fl1'),
+                ProtoChunk(start=0x14, sz=1, label='fl3'),
                 ProtoChunk(start=0x29, sz=1, label='it'),
                 ProtoChunk(start=0x30, sz=2, label='cs'),
             ])
@@ -141,7 +142,7 @@ class MessageResM1(Message):
         return cls.build(
             io=cls.io,
             raw=raw, chunks=[
-                ProtoChunk(start=0x0f, sz=6, label='ts'),
+                ProtoChunk(start=0x0e, sz=6, label='ts'),
                 ProtoChunk(start=0x14, sz=2, label='cs'),
             ])
 
@@ -203,8 +204,10 @@ class MessageReqM2(Message):
             raw=raw,
             chunks=[
                 ProtoChunk(start=0x05, sz=1, label='ilen'),
+                ProtoChunk(start=0x08, sz=1, label='fl1'),
                 ProtoChunk(start=0x09, sz=1, label='last'),
                 ProtoChunk(start=0x13, sz=1, label='last2'),
+                ProtoChunk(start=0x14, sz=1, label='fl2'),
             ])
 
 
@@ -290,7 +293,7 @@ class Transaction():
                 assert req_b[2:-2] == res_b[2:-2]
                 pairs.append(MessagePair(
                     label=label,
-                    req=MessageReqM2.build(raw=req_b),
+                    req=MessageReqM2.from_bytes(raw=req_b),
                     res=Message.build(io='out', label=label, raw=res_b),
                 ))
             elif req_b[2:5] == b('c0:02:c2'):
@@ -298,7 +301,7 @@ class Transaction():
                 assert req_b[2:-2] == res_b[2:-2]
                 pairs.append(MessagePair(
                     label=label,
-                    req=MessageReqM3.build(raw=req_b),
+                    req=MessageReqM3.from_bytes(raw=req_b),
                     res=Message.build(io='out', label=label, raw=res_b),
                 ))
             elif req_b[2:6] == b('00:00:00:00'):
