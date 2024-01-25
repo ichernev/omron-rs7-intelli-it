@@ -258,18 +258,37 @@ cs1[1] is iter + 2?
 
 This is in the second part of the message, only present when data was read.
 
-               M1                  M3 (second part)
-                VV       ZZ                VV       ZZ
-    01:18:11:0e:19:38:13:ec -> 01:18:11:0e:1b:38:13:ee     ->    1 VVd:2 ZZ:2
-    01:18:11:0e:14:39:17:e8 -> 01:18:11:0e:15:39:17:e9     ->    2 VVd:1 ZZ:1
-    01:18:0d:0f:38:3b:f4:0b -> 01:18:0d:0f:39:3b:f4:0c     ->    3 VVd:1 ZZ:1
-    01:18:00:10:13:22:3e:c1 -> 01:18:00:10:14:22:3e:c2     ->    4 VVd:1 ZZ:1
-    01:18:00:10:37:2f:0d:f2
-    01:18:00:10:05:30:3e:c1
-    01:18:00:10:0e:30:35:ca
-    01:18:00:10:17:30:2c:d3
-    01:18:11:11:35:08:24:db -> 01:18:11:11:38:08:24:de     ->    7 VVd:3 ZZ:3
+                     ##       ##             ##       ##
+      02 01:18:11:0e:14:39 17:e8 01:18:11:0e:15:39 17:e9   -> 1 | 21
+      03 01:18:0d:0f:38:3b f4:0b 01:18:0d:0f:39:3b f4:0c   -> 1 | 57
+      04 01:18:00:10:13:22 3e:c1 01:18:00:10:14:22 3e:c2   -> 1 | 20
+    05:a 01:18:00:10:37:2f 0d:f2                                | 55
+    05:b 01:18:00:10:05:30 3e:c1
+    05:c 01:18:00:10:0e:30 35:ca
+    05:d 01:18:00:10:17:30 2c:d3
+      06 01:18:11:11:35:08 24:db 01:18:11:11:38:08 24:de   -> 3 | 53
+      07 01:18:12:14:25:35 03:fc 01:18:12:14:23:35 03:fa   -> -2| 37
+      08 01:18:12:14:26:38 ff:00 01:18:12:14:27:38 ff:01   -> 1 | 38
+      09 01:18:0d:17:0f:13 3d:c2 01:18:0d:17:10:13 3d:c3   -> 1 | 16
 
-Most of the message is the same as the one read from M1, then col 4 changes by
+
+      02 1 24 17 14 20 57 1 24 17 14 21 57
+      03 1 24 13 15 56 59 1 24 13 15 57 59   -> 2024-01-15 13:59
+      04 1 24  0 16 19 34 1 24  0 16 20 34   -> 2024-01-16 00:34
+    05:a 1 24  0 16 55 47
+    05:b 1 24  0 16  5 48
+    05:c 1 24  0 16 14 48
+    05:d 1 24  0 16 23 48
+      06 1 24 17 17 53  8 1 24 17 17 56  8   -> 2024-01-17 17:08
+      07 1 24 18 20 37 53 1 24 18 20 35 53   -> 2024-01-20 18:53
+      08 1 24 18 20 38 56 1 24 18 20 39 56   ->
+      09 1 24 13 23 15 19 1 24 13 23 16 19   -> 2024-01-23 13:19
+         M yy hh dd ss mm M yy hh dd ss mm
+
+
+Most of the message is the same as the one read from M1, then col 5 changes by
 a different amount (related to number of read entries?), and the last one
-changes by the same amount (checksum?).
+changes by the same amount (checksum?). Can go down!
+
+Basically full date-time is read (the device time) and then written, so it can
+be adjusted, if necessary.
