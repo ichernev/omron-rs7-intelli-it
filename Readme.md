@@ -51,6 +51,7 @@ transfer.
   - synced at 18:53 (+5min) jan 20
 - 08 empty: 20240120185628
   - synced at 18:56 (+3min) jan 20
+- 09 11 meas: ...
 
 # Findings
 
@@ -130,25 +131,45 @@ The answer is kinda long:
     checksum inside package sums up to 255 (0xEA+0x15), but not sure how is it
     computed.
 
+Here are all the non-consts so far:
+
+                f1 l1 f2 p  l2 f3 it
+    02.M0.res   80 03 80 00 03 80 05
+    03.M0.res   00 04 00 01 04 00 07
+    04.M0.res   80 05 00 01 05 80 09
+    05:a.M0.res 80 05 80 00 05 80 0b
+    05:b.M0.res 80 05 80 00 05 80 0d
+    05:c.M0.res 80 05 80 00 05 80 0f
+    05:d.M0.res 80 05 80 00 05 80 11
+    06.M0.res   80 09 00 04 09 80 13
+    07.M0.res   00 0b 00 02 0b 00 15
+    08.M0.res   00 0b 80 00 0b 00 17
+    09.M0.res   00 16 00 0b 16 00 19
+
+    f1 == f3 ?
+    l1 == l2 -- the id of the last measurement
+    p        -- number of pending (unread) measurements
+    f2       -- 0x08 if p == 0 else 0x00
+    it       -- incremented by 2
+
+
 ## M1 08:01:00:02:8c:10:00:97
 
     [5d: empty]
-
+                                              ______
     18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
-                                              ?????
-
+                                                ts
+    ___________ _____
     00:10:17:30:2c:d3:00:b5
-    ?????????????????
+     ts-cont     cs
 
-    [7: 4 meas]
-
-    18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
-                                              ?????
-
-    11:11:35:08:24:db:00:bf
-    ?????????????????
-
-Not sure what this is, but it is "written back" in M3 with minor corrections.
+This is full device timestamp encoded in bytes:
+- month (1-12)
+- year  (0-255) - year (+ 2000)
+- hour  (0-23)
+- day   (1-31)
+- second (0-59)
+- minute (0-59)
 
 
 ## Device memory read (blood pressure measurement)
@@ -218,6 +239,25 @@ This message is echoed back from the device, I assume it's a write.
     80:00:00:09:80:00:00:ed
             last
 
+All non-cost fields
+                   f1 l1 l2 f2   M0: f1 l1
+    02.M2.req   10 80 03 03 80       80 03
+    03.M2.req   10 00 04 04 00       00 04
+    04.M2.req   10 80 05 05 80       80 05
+    05:a.M2.req 10 80 05 05 80       80 05
+    05:b.M2.req 10 80 05 05 80       80 05
+    05:c.M2.req 10 80 05 05 80       80 05
+    05:d.M2.req 10 80 05 05 80       80 05
+    06.M2.req   10 80 09 09 80       80 09
+    07.M2.req   10 00 0b 0b 00       00 0b
+    08.M2.req   10 00 0b 0b 00       00 0b
+    09.M2.req   10 00 16 16 00       00 16
+
+    f1 == f2 == f1/f3 from M0
+    l1 == l2 == l1/l2 from M0
+
+Maybe it gets more interesting after the measurements wrap around in the
+memory.
 
 ## M3 18:01:c0:02:c2:XX
 
@@ -292,3 +332,20 @@ changes by the same amount (checksum?). Can go down!
 
 Basically full date-time is read (the device time) and then written, so it can
 be adjusted, if necessary.
+
+All non-const (excluding cs)
+                it ts                    it (M0)
+    02.M3.req   07 01:18:11:0e:15:39     05
+    03.M3.req   09 01:18:0d:0f:39:3b     07
+    04.M3.req   0b 01:18:00:10:14:22     09
+    05:a.M3.req 0d                       0b
+    05:b.M3.req 0f                       0d
+    05:c.M3.req 11                       0f
+    05:d.M3.req 13                       11
+    06.M3.req   15 01:18:11:11:38:08     13
+    07.M3.req   17 01:18:12:14:23:35     15
+    08.M3.req   19 01:18:12:14:27:38     17
+    09.M3.req   1b 01:18:0d:17:10:13     19
+
+    it == M0.it + 2
+    ts == accurate timestamp (check M1 or above for field desc)
