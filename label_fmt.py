@@ -19,6 +19,8 @@ def parse_args(args):
                         help="put a few matches per line (matching that many path components)")
     parser.add_argument('--int', action='store_true',
                         help="Output ints, not hex")
+    parser.add_argument('--table', action='store_true',
+                        help="Align columns")
     return parser.parse_args(args)
 
 def load_data(inp: str):
@@ -76,7 +78,7 @@ class Observer():
         self._items.append((path, leaf))
         # print(f'{".".join(path)}  {leaf["raw"]}')
 
-    def show(self, pad: bool = True, addr: bool = False, line: int = None, ints: bool = False):
+    def show(self, pad: bool = True, pad_dirs: str = '<', addr: bool = False, line: int = None, ints: bool = False):
         tdata = []
         if line is None:
             for path, data in self._items:
@@ -106,16 +108,19 @@ class Observer():
                         tdata.append([match, addr_s, *d_raw])
                     else:
                         tdata.append([match, *d_raw])
-        max_col_w = [0] * max(len(tdata_line) for tdata_line in tdata)
+        max_col_w = [0] * (max(len(tdata_line) for tdata_line in tdata)
+                           if tdata
+                           else 1)
         for tdata_line in tdata:
             for i, item in enumerate(tdata_line):
                 max_col_w[i] = max(max_col_w[i], len(item))
 
-        for tdata_line in tdata:
+        for i, tdata_line in enumerate(tdata):
             line = []
             for i, item in enumerate(tdata_line):
                 padding = ' ' * (max_col_w[i] - len(item)) if pad else ''
-                line.append(padding + item)
+                pad_dir = pad_dirs[i] if i < len(pad_dirs) else pad_dirs[-1]
+                line.append((padding + item) if pad_dir == '>' else (item + padding))
             print(' '.join(line))
 
         self._tdata = tdata
@@ -144,7 +149,7 @@ def main(opts):
         return
     obs = Observer(opts.filter or [])
     iter_leafs(data, level=0, cb=obs)
-    obs.show(addr=opts.addr, line=opts.line, ints=opts.int)
+    obs.show(pad=opts.table, addr=opts.addr, line=opts.line, ints=opts.int)
     if opts.summary:
         obs.summary()
 
