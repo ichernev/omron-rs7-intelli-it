@@ -73,46 +73,23 @@ From now on I'm focusing on understanding the input/output messages themselves.
   write) in parsed)
 - M3 is echoed back verbatim (sans 01->81 and checksum)
 
-## M1-M3
-
-Kind of transaction, current state (iter) is first read in M1, then
-in M3 it is confirmed that the state is read, the device echos it back.
-
-    [M1-o] 0b f2 0d --> [M3-io] 0d f2 0f
-    [M1-o] 0d f0 0f --> [M3-io] 0f f0 11
-    [M1-o] 0f ee 11 --> [M3-io] 11 ee 13
-    [M1-o] 11 ec 13 --> [M3-io] 13 ec 15
-
-The second part of (f20d) that is going in both directions, is probably
-an inner checksum.
-
-## M2
-
-Only some stuff at the back is changing (before checksum)
-
-    37:2f:0d:f2 -?
-    05:30:3e:c1
-    0e:30:35:ca
-    17:30:2c:d3
-
-the first byte increases with 9, last 2 bytes (u16) decrease with 2295, which
-is -9 mod 256
 
 ## M0 08:01:00:02:60:2c:00:47
 
 The answer is kinda long:
 
-    [5d: empty]
+    [5d: empty]                __       _____
     34:81:00:02:60:2c:80:0f:80:05:00:02:80:00:00:0f:
                               last
-
+             __
     80:00:00:05:80:00:0a:4d:00:0d:00:0b:00:00:00:00:
 
 
     00:00:90:6f:01:00:00:01:00:11:00:00:00:00:00:00:
-                               ??
-
+                               it
+    __ __
     ec:13:00:29
+    xi it2
 
     [7: 4 measurements]
                                __       _____
@@ -123,13 +100,14 @@ The answer is kinda long:
             last
                                __
     00:00:90:6f:01:00:00:01:00:13:00:00:00:00:00:00:
-                               ??
+                               it
     _____
     ea:15:00:af
-     cs
+   csi it2
 
-    checksum inside package sums up to 255 (0xEA+0x15), but not sure how is it
-    computed.
+
+    csi+it2 == 255
+    it2 = it + 2
 
 Here are all the non-consts so far:
 
@@ -163,14 +141,16 @@ Here are all the non-consts so far:
     00:10:17:30:2c:d3:00:b5
      ts-cont     cs
 
-This is full device timestamp encoded in bytes:
+    cs[0]+cs[1] == 255
+    cs[1] = sum(msg[6:0x14]) % 256
+
+This is full device timestamp encoded in 6 bytes:
 - month (1-12)
-- year  (0-255) - year (+ 2000)
+- year  (0-255) (+ 2000)
 - hour  (0-23)
 - day   (1-31)
 - second (0-59)
 - minute (0-59)
-
 
 ## Device memory read (blood pressure measurement)
 
@@ -293,8 +273,11 @@ I guess c0:02 is write comman and the next two bytes are pos+len
     38:08:24:de:00:e1
 
 
-cs1 sums up to 257
-cs1[1] is iter + 2?
+    cs1 sums up to 257
+    cs1[1] is iter + 2?
+
+    cs2[0]+cs2[1] == 255
+    cs2[1] = sum(b[0x14:0x22]) % 256
 
 This is in the second part of the message, only present when data was read.
 
