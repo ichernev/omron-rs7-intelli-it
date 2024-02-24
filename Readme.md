@@ -220,6 +220,7 @@ This message is echoed back from the device, I assume it's a write.
             last
 
 All non-cost fields
+
                    f1 l1 l2 f2   M0: f1 l1
     02.M2.req   10 80 03 03 80       80 03
     03.M2.req   10 00 04 04 00       00 04
@@ -317,6 +318,7 @@ Basically full date-time is read (the device time) and then written, so it can
 be adjusted, if necessary.
 
 All non-const (excluding cs)
+
                 it ts                    it (M0)
     02.M3.req   07 01:18:11:0e:15:39     05
     03.M3.req   09 01:18:0d:0f:39:3b     07
