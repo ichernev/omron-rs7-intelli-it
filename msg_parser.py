@@ -143,7 +143,8 @@ class MessageResM1(Message):
             io=cls.io,
             raw=raw, chunks=[
                 ProtoChunk(start=0x0e, sz=6, label='ts'),
-                ProtoChunk(start=0x14, sz=2, label='cs'),
+                ProtoChunk(start=0x14, sz=1, label='x'),
+                ProtoChunk(start=0x15, sz=1, label='cs'),
             ])
 
 @dataclass(kw_only=True)
@@ -230,7 +231,8 @@ class MessageReqM3(Message):
                 ProtoChunk(start=0x12, sz=2, label='cs1'),
                 *([
                     ProtoChunk(start=0x1c, sz=6, label='ts'),
-                    ProtoChunk(start=0x22, sz=2, label='cs2'),
+                    ProtoChunk(start=0x22, sz=1, label='x'),
+                    ProtoChunk(start=0x23, sz=1, label='cs2'),
                 ] if ilen == 0x1e else []),
             ])
 

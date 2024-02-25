@@ -137,12 +137,11 @@ Here are all the non-consts so far:
                                               ______
     18:81:00:02:8c:10:a0:c0:00:03:00:00:00:00:01:18:
                                                 ts
-    ___________ _____
+    ___________ __ __
     00:10:17:30:2c:d3:00:b5
-     ts-cont     cs
+     ts-cont     x cs
 
-    cs[0]+cs[1] == 255
-    cs[1] = sum(msg[6:0x14]) % 256
+    cs = sum(msg[6:0x14]) % 256
 
 This is full device timestamp encoded in 6 bytes:
 - month (1-12)
@@ -253,6 +252,7 @@ I guess c0:02 is write comman and the next two bytes are pos+len
            cs1
              --|
     14:22:3e:c2:00:eb
+           x cs2
 
     [5d: empty]
                      |->
@@ -272,13 +272,13 @@ I guess c0:02 is write comman and the next two bytes are pos+len
            cs1
              <-|
     38:08:24:de:00:e1
-
+           x cs2
 
     cs1 sums up to 257
     cs1[1] is iter + 2?
 
-    cs2[0]+cs2[1] == 255
-    cs2[1] = sum(b[0x14:0x22]) % 256
+    x -- from M1
+    cs2 = sum(b[0x14:0x22]) % 256
 
 This is in the second part of the message, only present when data was read.
 
@@ -309,10 +309,6 @@ This is in the second part of the message, only present when data was read.
       09 1 24 13 23 15 19 1 24 13 23 16 19   -> 2024-01-23 13:19
          M yy hh dd ss mm M yy hh dd ss mm
 
-
-Most of the message is the same as the one read from M1, then col 5 changes by
-a different amount (related to number of read entries?), and the last one
-changes by the same amount (checksum?). Can go down!
 
 Basically full date-time is read (the device time) and then written, so it can
 be adjusted, if necessary.
