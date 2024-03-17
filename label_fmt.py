@@ -1,5 +1,6 @@
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Callable
 
@@ -30,7 +31,8 @@ def load_data(inp: str):
             id = file.name[:-5].replace('.', ':')
             data[id] = json.loads(file.read_bytes())
     else:
-        assert file.endswith('.json')
+        assert inp.endswith('.json')
+        file = Path(inp)
         id = file.name[:-5].replace('.', ':')
         data[id] = json.loads(file.read_bytes())
     return data
@@ -53,7 +55,7 @@ def iter_leafs(data: dict, level: int, cb: Callable, path: list[str] = []):
 class Observer():
     def __init__(self, filters: list[str]):
         self.filters = filters
-        self._items = []
+        self._items: list[tuple[list[str], dict]] = []
 
     def __call__(self, path: list[str], leaf: dict):
         bpid = None
@@ -78,7 +80,7 @@ class Observer():
         self._items.append((path, leaf))
         # print(f'{".".join(path)}  {leaf["raw"]}')
 
-    def show(self, pad: bool = True, pad_dirs: str = '<', addr: bool = False, line: int = None, ints: bool = False):
+    def show(self, pad: bool = True, pad_dirs: str = '<', addr: bool = False, line: int | None = None, ints: bool = False):
         tdata = []
         if line is None:
             for path, data in self._items:
@@ -95,7 +97,7 @@ class Observer():
             for path, data in self._items:
                 jpath = '.'.join(path)
                 d_raw = [data['raw']] if not ints else list(map(str, data['int']))
-                addr_s = f" {data['start']:0>2x}:{data['start'] + data['sz']:0>2x}" if addr else None
+                addr_s = f" {data['start']:0>2x}:{data['start'] + data['sz']:0>2x}" if addr else ''
 
                 match = '.'.join(path[:line])
                 if match == last_match:
@@ -116,12 +118,12 @@ class Observer():
                 max_col_w[i] = max(max_col_w[i], len(item))
 
         for i, tdata_line in enumerate(tdata):
-            line = []
+            res_line = []
             for i, item in enumerate(tdata_line):
                 padding = ' ' * (max_col_w[i] - len(item)) if pad else ''
                 pad_dir = pad_dirs[i] if i < len(pad_dirs) else pad_dirs[-1]
-                line.append((padding + item) if pad_dir == '>' else (item + padding))
-            print(' '.join(line))
+                res_line.append((padding + item) if pad_dir == '>' else (item + padding))
+            print(' '.join(res_line))
 
         self._tdata = tdata
         self._max_col_w = max_col_w

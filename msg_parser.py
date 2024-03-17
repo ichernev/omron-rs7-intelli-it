@@ -1,11 +1,27 @@
 from dataclasses import dataclass, field
 from typing import Literal, Callable
-from tools import ints
+from tools import ints, add_checksum, to_bytes, pretty_hex, s_checksum, split_i
+import datetime
 
 def b(s): return bytes.fromhex(s.replace(':', ''))
-def pretty_hex(b): return ':'.join(f'{i:0>2x}' for i in b)
 
 io_t = Literal['in', 'out', 'other']
+
+def enc_ts(ts: datetime.datetime) -> bytes:
+    return bytes([
+        ts.month,
+        ts.year - 2000,
+        ts.hour,
+        ts.day,
+        ts.second,
+        ts.minute,
+    ])
+
+def dec_ts(bts: bytes) -> datetime.datetime:
+    assert len(bts) == 6
+    month, year, hour, day, second, minute = bts
+    return datetime.datetime(year=year+2000, month=month, day=day,
+                             hour=hour, minute=minute, second=second)
 
 @dataclass(kw_only=True)
 class Chunk():
@@ -37,6 +53,13 @@ class Chunk():
             } if not short else {}),
         }
 
+    def to_i(self):
+        res = 0
+        for b in self.raw:
+            res *= 256
+            res += b
+        return res
+
 @dataclass(kw_only=True)
 class ProtoChunk():
     start: int | None = None
@@ -57,6 +80,12 @@ class Message():
             'label': self.label,
             **{chunk.label: chunk.to_json() for chunk in self.chunks}
         }
+
+    def get_chunk(self, label: str) -> Chunk | None:
+        for chunk in self.chunks:
+            if chunk.label == label:
+                return chunk
+        return None
 
     @classmethod
     def build(cls, raw: bytes, chunks: list[ProtoChunk] = [], label: str | None = None, io: io_t | None = None, complete: bool = False):
@@ -112,6 +141,19 @@ class Message():
         rchunks.extend(cchunks)
         rchunks.sort(key=lambda ch: ch.start)
 
+    @classmethod
+    def make_req(cls, label: str,
+                 payload: bytes):
+        while len(payload) < 4:
+            # pad to 4
+            payload = bytes([0, *payload])
+        header = 0x01 if any(payload) else 0x0f
+        length = len(payload) + 4
+
+        return Message.build(io='in', label=label,
+                             raw=add_checksum(bytes([length, header, *payload])))
+
+
 @dataclass(kw_only=True)
 class MessageResM0(Message):
     io: io_t = 'out'
@@ -149,6 +191,14 @@ class MessageResM1(Message):
 
 @dataclass(kw_only=True)
 class MessageBPItem(Message):
+    @dataclass(kw_only=True)
+    class BPHuman:
+        sys: int
+        dia: int
+        pulse: int
+        ts: datetime.datetime
+        pos: int
+
     io: io_t = 'other'
 
     @classmethod
@@ -166,6 +216,26 @@ class MessageBPItem(Message):
                 ProtoChunk(start=0x0c, sz=2, label='cs'),
             ],
             complete=True)
+
+    def to_human(self):
+        # TODO(Iskren): flags!
+        tsi = self.get_chunk("ts").to_i()
+        tsb = f'{tsi:0>32b}'
+        month = split_i(tsi, 26, 4)
+        day = split_i(tsi, 21, 5)
+        hour = split_i(tsi, 16, 5)
+        minute = split_i(tsi, 6, 6)
+        sec = split_i(tsi, 0, 6)
+        ts = datetime.datetime(year=datetime.datetime.now().year, month=month, day=day, hour=hour, minute=minute, second=sec)
+        # print(f"{month} {day} {hour} {minute} {sec}")
+        # print(f"ts {tsb[0:8]} {tsb[8:16]} {tsb[16:24]} {tsb[24:32]}")
+        return self.BPHuman(
+            sys=self.get_chunk('sys').to_i() + 25,
+            dia=self.get_chunk('dia').to_i(),
+            pulse=self.get_chunk('pulse').to_i(),
+            ts=ts,
+            pos=self.get_chunk('pos').to_i(),
+        )
 
 
 @dataclass(kw_only=True)
@@ -189,6 +259,7 @@ class MessageResBP(Message):
                    for i in range(sz)]
         )
 
+
     def merge(self, other):
         self.items.extend(other.items)
 
@@ -211,6 +282,15 @@ class MessageReqM2(Message):
                 ProtoChunk(start=0x14, sz=1, label='fl2'),
             ])
 
+
+    @classmethod
+    def from_fields(cls, f1: int, l1: int, l2: int, f2: int):
+        ilen = 0x10
+        return cls.make_req(label='M2', payload=to_bytes(
+            # 18:01
+            'c0:02:a4', ilen, '80:0f', f1, l1, '00:02:80:00:00:0f',
+            '80:00:00', l2, f2, '00',
+        ))
 
 @dataclass(kw_only=True)
 class MessageReqM3(Message):
@@ -237,6 +317,19 @@ class MessageReqM3(Message):
             ])
 
 
+    @classmethod
+    def from_fields(cls, it: int, ts: datetime.datetime | None, x: int | None):
+        header = to_bytes('c0:02:c2', 0x1e if ts else 0x0e)
+        pc1_a = to_bytes('01:00:00:01:00', it, '00:00:00:00:00:00')
+        pc1 = to_bytes(pc1_a, (257 - sum(pc1_a) % 256) % 256, it + 2)
+        if ts is not None and x is not None:
+            pc2_a = to_bytes('a0:c0:00:03:00:00:00:00', enc_ts(ts))
+            pc2 = to_bytes(pc2_a, x, s_checksum(pc2_a)) if ts else None
+        else:
+            pc2 = None
+        return cls.make_req(label='M3', payload=to_bytes(header, pc1, pc2))
+
+
 @dataclass(kw_only=True)
 class MessagePair():
     req: Message
@@ -258,7 +351,7 @@ class Transaction():
         return {pair.label: pair.to_json() for pair in self.pairs}
 
     @classmethod
-    def from_hex_list(cls, hex_list: list[str]):
+    def from_hex_list(cls, hex_list: list[str], merge_bp: bool = True):
         pairs: list[MessagePair] = []
         for req_s, res_s in zip(hex_list[::2], hex_list[1::2]):
             req_b = b(req_s)
@@ -284,11 +377,12 @@ class Transaction():
                     req=Message.build(io='in', label=label, raw=req_b),
                     res=MessageResBP.from_bytes(raw=res_b),
                 )
-                if pairs[-1].label != 'BP':
+                if pairs[-1].label != 'BP' or not merge_bp:
                     pairs.append(mp)
                 else:
                     # we combine all the BP measurements, and let the first req
                     # (it will be "wrong' but we don't really care.
+                    assert isinstance(pairs[-1].res, MessageResBP)
                     pairs[-1].res.merge(mp.res)
             elif req_b[2:6] == b('c0:02:a4:10'):
                 label = 'M2'
@@ -317,6 +411,21 @@ class Transaction():
             else:
                 raise ValueError("Failed to match message " + pretty_hex(req_b[:6]))
         return cls(pairs=pairs)
+
+
+def res_builder_from_req(req: Message):
+    if req.label == 'M0':
+        return lambda raw: MessageResM0.from_bytes(raw=raw)
+    elif req.label == 'M1':
+        return lambda raw: MessageResM1.from_bytes(raw=raw)
+    elif req.label == 'BP':
+        return lambda raw: MessageResBP.from_bytes(raw=raw)
+    elif req.label == 'M2':
+        return lambda raw: Message.build(io='out', label='M2', raw=raw)
+    elif req.label == 'M3':
+        return lambda raw: Message.build(io='out', label='M3', raw=raw)
+    elif req.label == 'M4':
+        return lambda raw: Message.build(io='out', label='M4', raw=raw)
 
 
 if __name__ == '__main__':
